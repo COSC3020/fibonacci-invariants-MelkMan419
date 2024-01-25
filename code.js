@@ -1,9 +1,9 @@
 function fib(n,arr=[]){
     if(n===0){
-        return [0];
+        arr=[0];
     }
     if(n===1){
-        return [1];
+        arr=[1];
     }
     if(arr!==undefined){
        return arr[n];
