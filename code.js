@@ -1,13 +1,15 @@
 function fib(n,arr=[]){
     if(n===0){
-        return arr[n]=0;
+        arr[n]=0;
     }
-    if(n===1){
-        return arr[n]=1;
+    else if(n===1){
+        arr[n]=1;
     }
-    if(arr!==undefined){
+    else if(arr!==undefined){
        return arr[n];
     }
-    arr[n]=fib(n-1,arr)+fib(n-2,arr);
+    else{
+        arr[n]=fib(n-1,arr)+fib(n-2,arr);
+    }
     return arr[n];
 }
