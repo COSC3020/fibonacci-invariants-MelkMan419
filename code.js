@@ -9,7 +9,7 @@ function fib(i,n,arr){
         arr.push(arr[i-1]+arr[i-2]);
         fib(i+1,n,arr);
     }
-    return arr[n];
+    return arr;
 }
 
 module.exports={fib};
