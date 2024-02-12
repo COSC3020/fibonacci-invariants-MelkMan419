@@ -1,15 +1,9 @@
-function fib(i,n,arr) {
-    if (n===0) {
-        return [0];
+function fib(n, arr = [0, 1]) {
+    if (n <= 1) {
+        return arr.slice(0, n + 1);
     }
-    if (n===1) {
-        return [0, 1];
-    }
-    if (i<=n) {
-        arr.push(arr[i-1]+arr[i-2]);
-        fib(i+1,n,arr);
-    }
-    return arr;
+    arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
+    return fib(n - 1, arr);
 }
 
-module.exports= { fib };
+module.exports = { fib };
