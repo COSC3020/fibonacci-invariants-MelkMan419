@@ -28,3 +28,8 @@ about the current recursive call.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. You do not need to prove that the invariant is correct. Add
 your answer to this markdown file.
+
+At the beginning of the recursion, i is the index representing the current position in the Fibonacci sequence, and arr contains the initial values [0, 1] which are the first two Fibonacci numbers.
+During each recursive call, the fib() function calculates the next Fibonacci number by summing the last two elements in the arr array.
+The invariant ensures that at the start of each recursive call, the arr array holds the correct Fibonacci sequence up to index i.
+Since the function appends the next Fibonacci number to the arr array during each recursive call, the invariant ensures that the function always operates on the correct sequence, preventing any errors in the calculations.
