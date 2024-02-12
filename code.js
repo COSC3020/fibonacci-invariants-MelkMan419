@@ -1,15 +1,15 @@
-function fib(n,arr=[]){
+function fib(i,n,arr){
     if(n===0){
-        arr[n]=0;
+        return [0];
     }
-    else if(n===1){
-        arr[n]=1;
+    if(n===1){
+        return [0,1];
     }
-    else if(arr!==undefined){
-       return arr[n];
-    }
-    else{
-        arr[n]=fib(n-1,arr)+fib(n-2,arr);
+    if(i<=n){
+        arr.push(arr[i-1]+arr[i-2]);
+        fib(i+1,n,arr);
     }
     return arr[n];
 }
+
+module.exports={fib};
