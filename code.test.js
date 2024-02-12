@@ -20,7 +20,7 @@ const fibTest = (n) => {
 };
     
 const test = jsc.forall("nat", function (n) {
-    return arraysEqual(fib(2, n, [0, 1), fibTest(n));
+    return arraysEqual(fib(2, n, [0, 1]), fibTest(n));
 });
 
 jsc.assert(test);
